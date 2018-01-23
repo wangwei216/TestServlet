@@ -12,5 +12,6 @@
   </head>
   <body>
   这是网站显示的内容
+  <%= request.getAttribute("message")%>
   </body>
 </html>

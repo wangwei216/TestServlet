@@ -15,6 +15,7 @@ import java.util.Enumeration;
 *       2. 这个是getInitParameterNames() ,返回的是servlet初始化参数的所有名称
 *       3. getServletContext() 获取ServletContext的对象
 *       4. getServletName（） 获取servlet的Name配置值
+*
 * */
 
 public class HelloServlet extends HttpServlet{

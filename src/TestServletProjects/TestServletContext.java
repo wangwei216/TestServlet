@@ -21,6 +21,12 @@ import java.io.IOException;
         2. 然后用Object getAttribute（String name）  来获取数据
         3. 最后是Object removeAttribute(String name)  是用来移除数据的
 
+    三、 使用servletContext也可以获取到web项目中的资源文件（读取链接数据库的配置文件）
+        1. 先用getServletContext().getResourceAsStream();这个参数传进来的是一个web-INF下的路径，返回的是一个inputStream类型的输入流
+        2. 创建一个Properties类型的对象
+        3. 调用properties.load()方法，传进去的参数是inputStream类型的实例对象
+        4. 使用properties对象调用getProperties()方法，传进来的是配置信息的名字也就是字符串类型
+
 * */
 @WebServlet(name = "TestServletContext",urlPatterns = "/testServletContext")
 

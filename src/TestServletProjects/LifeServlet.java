@@ -16,6 +16,8 @@ import java.io.IOException;
 *   3. 最后会执行destory方法，但是如果当客户端不是第一次访问服务器的话，就不会调用init方法，而是直接调用service方法，
 * 注意：servlet实例是单例的。无论客户端向服务器请求多少次，最多只有一次实例。 在多个客户端并发请求服务器的时候,服务器会启动多个线程分别执行servlet的方法
 * 原因：如果我们每次请求都进行一次实例的话，会占用和浪费过多的计算机服务资源
+*
+*
 * */
 @WebServlet(name = "LifeServlet" ,urlPatterns = "/life")
 public class LifeServlet extends HttpServlet {
