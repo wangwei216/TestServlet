@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 /*
                 这个servlet是实现自动跳转的功能
- 一、 通过setRefresh（"refresh","多少时间后刷新的参数"）这个响应头来实现自动跳转
+ 一、 通过setRefresh（"refresh","多少时间后刷新的参数"）这个响应头来实现自动刷新
        1. 通过 response.setHeader("refresh","3;URL='/hello/home.html'");第一个参数固定的，第二个参数是自动刷新的时间和自动转到的url
        2. request.setAttribute("message",message);用来在同一个request周期中保存变量使用。
        3. 用调度分发器 也就是实现转发功能request.getRequestDispatcher("/index.jsp").forward(request,response);
