@@ -10,6 +10,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
 <html>
 <head>
     <title>这是el的总结</title>
@@ -46,14 +47,21 @@
 %>
 
 <%
-          List<User> list1= (List<User>) application.getAttribute("list");
+    List<User> list1= (List<User>) application.getAttribute("list");
     User user4 = list1.get(0);
     out.write(user4.getName());
 
 %>
 
+<%--这个就是用EL表达式简化之后的结果--%>
+
 ${requestScope.name}
 ${sessionScope.user.name}
 ${applicationScope.list[0].name}
+
+${name}
+${user.name}
+${list[0].name}
+
 </body>
 </html>
